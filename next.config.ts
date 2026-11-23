@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
@@ -11,6 +10,13 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+  // Case-study JSON is read from disk at build time; include it in serverless traces too.
+  outputFileTracingIncludes: {
+    "/*": ["./content/**/*.json"],
   },
 };
 

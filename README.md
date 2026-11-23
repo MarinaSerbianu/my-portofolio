@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evidence-based UX/Product Design Portfolio
 
-## Getting Started
+Next.js 16 (App Router, Cache Components) · TypeScript · Tailwind CSS 4 · Motion · Zod.
 
-First, run the development server:
+This portfolio presents case studies as **evidence → hypothesis → design → experiment → result → learning**.
+Every metric carries an evidence status and a source, and failed assumptions are part of the template.
+
+- Architecture, information architecture and visual system: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- QA checklist: [docs/QA-CHECKLIST.md](docs/QA-CHECKLIST.md)
+- Deployment: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev            # http://localhost:3000 — shows demo content + labels
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node 20.9+ is required (developed on Node 24).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script                  | What it does                                                       |
+| ----------------------- | ------------------------------------------------------------------ |
+| `npm run dev`           | Dev server. Shows demo content and unverified metrics, all labelled |
+| `npm run build`         | Production build: **no demo, no unverified metrics**. Runs `check:content` afterwards |
+| `npm run build:preview` | Production build *with* demo + unverified metrics (for previews/tests) |
+| `npm run check:content` | Scans build output for leaked internal strings and lists placeholders |
+| `npm run test:e2e`      | Playwright: axe WCAG 2.2 AA, overflow at 320/768/1440/1920, keyboard checks |
+| `npm run qa`            | typecheck → lint → preview build → content check → e2e              |
 
-## Learn More
+On first use, run `npx playwright install chromium`.
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+content/case-studies/*.json   Case studies (one file each; "_"-prefixed files are ignored)
+public/                       Images (put project images in public/work/<slug>/), cv.pdf
+src/content/schema.ts         Zod content contract — the build fails on invalid content
+src/content/policy.ts         What may appear in a build (demo / unverified)
+src/content/case-studies.ts   Load → validate → strip confidential fields → sort
+src/content/site.ts           Name, contact, career, method, toolkit  ← edit me
+src/components/ui/            Section, Reveal, Button, EvidenceBadge, Figure, icons
+src/components/case/          CaseCard, MetricCard, CountUp, BeforeAfter, Disclosure, CaseToc, blocks
+src/components/work/          WorkFilter
+src/app/                      Routes: / · /work · /work/[slug] · /about · /contact + OG, sitemap, robots
+scripts/check-content.mjs     Leak and placeholder guard
+tests/site.spec.ts            E2E and accessibility tests
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Adding a real case study
 
-## Deploy on Vercel
+1. Export JSON from the research workflow into `content/case-studies/<slug>.json`.
+   [`demo-delivery-promise.json`](content/case-studies/demo-delivery-promise.json) shows every field;
+   the authoritative contract is [`src/content/schema.ts`](src/content/schema.ts).
+2. For **every metric**, set `value`, `unit`, `evidenceStatus`, `source.label` and `publicVisibility`.
+   - `source.label` is public ("VWO, 21-day A/B test, mobile").
+   - `source.ref` is internal (dashboard URL or ticket) and is **always stripped**.
+   - Only set `publicVisibility: true` after NDA or stakeholder clearance.
+3. Put anything confidential in `internalNotes`. It's never rendered, and `check:content` verifies it isn't in the build.
+4. Put images in `public/work/<slug>/` with real `alt` text and the correct `width`/`height`.
+5. Optional sections (research, hypothesis, before/after, experiment, results…) can be omitted.
+   The template renders only what's present and renumbers the sections.
+6. Run `npm run qa`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Evidence status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Status        | Meaning                                         | Production |
+| ------------- | ----------------------------------------------- | ---------- |
+| `verified`    | Checked against the source of truth             | Shown      |
+| `directional` | Real but not conclusive (e.g. not significant)  | Shown, labelled |
+| `unverified`  | Not yet checked                                 | Hidden     |
+| `demo`        | Placeholder                                     | Hidden     |
+
+The UI never derives, rounds or invents numbers. It displays `value` at the configured `precision`.
+
+## Before launch
+
+Run `npm run check:content -- --strict --skip-leaks`. It lists every placeholder still left in `src/content/site.ts`
+(name, email, LinkedIn, career years, toolkit). Then add `public/cv.pdf` and delete the demo case study.
+Production deploys on Vercel fail while placeholders remain.

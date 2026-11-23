@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T13:43:43+00:00",
+  "title": "Design System: Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "White Paper",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Cool Surface",
+        "canonical": "#f5f6f8",
+        "oklch": "oklch(97.3% 0.003 265)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242526",
+          "#414243",
+          "#606163",
+          "#818284",
+          "#a4a5a7",
+          "#c8c9ca",
+          "#eeeeef"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-Black Ink",
+        "canonical": "#15171c",
+        "oklch": "oklch(20.5% 0.010 268)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#23252a",
+          "#404247",
+          "#5f6166",
+          "#808287",
+          "#a3a5a9",
+          "#c8c9cb",
+          "#eeeeef"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#474c56",
+        "oklch": "oklch(41.6% 0.018 264)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21252d",
+          "#3d424c",
+          "#5c616b",
+          "#7e828c",
+          "#a1a5ae",
+          "#c7c9ce",
+          "#eeeef0"
+        ]
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Soft Graphite",
+        "canonical": "#5c626d",
+        "oklch": "oklch(49.5% 0.019 263)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21252d",
+          "#3d424c",
+          "#5b616c",
+          "#7d838d",
+          "#a0a5af",
+          "#c6c9cf",
+          "#edeef0"
+        ]
+      },
+      "pen": {
+        "role": "primary",
+        "displayName": "Ink Blue Pen",
+        "canonical": "#1d3bc4",
+        "oklch": "oklch(43.6% 0.213 266)",
+        "tonalRamp": [
+          "#010134",
+          "#070875",
+          "#1328ad",
+          "#2b50d4",
+          "#4e78f1",
+          "#7ea1f9",
+          "#b2c9fc",
+          "#e7efff"
+        ]
+      },
+      "strike": {
+        "role": "secondary",
+        "displayName": "Correction Red",
+        "canonical": "#c42d19",
+        "oklch": "oklch(53.8% 0.190 31)",
+        "tonalRamp": [
+          "#1e0100",
+          "#4a0702",
+          "#7b1608",
+          "#b31d09",
+          "#da4b36",
+          "#fb7862",
+          "#fcb5a7",
+          "#ffe9e4"
+        ]
+      },
+      "highlight": {
+        "role": "tertiary",
+        "displayName": "Highlighter Yellow",
+        "canonical": "#ffe55c",
+        "oklch": "oklch(91.9% 0.156 98)",
+        "tonalRamp": [
+          "#0e0b02",
+          "#2b2504",
+          "#4c4209",
+          "#706106",
+          "#95821b",
+          "#bba530",
+          "#d9ca7f",
+          "#f3efd8"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e2e4e8",
+        "oklch": "oklch(91.9% 0.006 265)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#242528",
+          "#404245",
+          "#5f6165",
+          "#808286",
+          "#a3a5a9",
+          "#c8c9cc",
+          "#eeeeef"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#858b96",
+        "oklch": "oklch(63.5% 0.018 263)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#22252b",
+          "#3e424a",
+          "#5c616b",
+          "#7d838d",
+          "#9fa5b0",
+          "#c6c9d0",
+          "#edeef0"
+        ]
+      },
+      "grid": {
+        "role": "neutral",
+        "displayName": "Research Grid",
+        "canonical": "#e6ebf3",
+        "oklch": "oklch(93.9% 0.012 260)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242527",
+          "#404245",
+          "#5f6166",
+          "#7f8288",
+          "#a1a5ac",
+          "#c6c9ce",
+          "#edeef0"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Slot Paper",
+        "canonical": "#f7f8fa",
+        "oklch": "oklch(97.9% 0.003 265)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242526",
+          "#414243",
+          "#606163",
+          "#818284",
+          "#a4a5a7",
+          "#c8c9ca",
+          "#eeeeef"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The person's name on the home page only."
+      },
+      "headline-lg": {
+        "displayName": "Headline Large",
+        "purpose": "Page titles and the closing contact question."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, the lead case title, the contact email."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Index entries, findings, steps, career stages, option names."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "First paragraph of prose, hypothesis rows, decisions, the stance line."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text, capped at 66ch."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Buttons, nav, filter, footer, inline actions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sentence-case metadata, panel heads, evidence and outcome labels."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Blue italic margin notes: sources, captions, lessons. Rendered italic in pen blue."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Result values in metric cards; tabular lining figures."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing curve for every draw, morph, nudge and bar."
+      },
+      {
+        "name": "ink-draw",
+        "value": "background-size 0% to 100%, 900ms ease-out-expo",
+        "purpose": "Pen underline, dashed underline and red strike drawn once on scroll into view (IntersectionObserver, rootMargin bottom -18%, optional stagger delay). Instant under reduced motion."
+      },
+      {
+        "name": "highlighter-draw",
+        "value": "background-size 0% to 100%, 700ms ease-out-expo",
+        "purpose": "Yellow band behind verified metric values."
+      },
+      {
+        "name": "cover-morph",
+        "value": "view-transition group .morph, 480ms ease-out-expo",
+        "purpose": "Shared-element morph from a work-index cover to the case-study cover."
+      },
+      {
+        "name": "route-crossfade",
+        "value": "view-transition root, 220ms ease-out-expo",
+        "purpose": "Short cross-fade for other route changes."
+      },
+      {
+        "name": "bar-draw",
+        "value": "transform scaleX 0 to 1, 300ms ease-out-expo, origin left",
+        "purpose": "2px pen bar under active nav, TOC and filter items; arrow nudge 4px on hover."
+      },
+      {
+        "name": "color-shift",
+        "value": "color / background-color 150-200ms",
+        "purpose": "Link and button hover to pen blue."
+      },
+      {
+        "name": "cover-hover",
+        "value": "transform scale 1.015-1.03, 700ms ease-out-expo",
+        "purpose": "Gentle cover zoom on index and lead-case hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--pen); outline-offset: 3px",
+      "purpose": "One focus ring everywhere; linked rows draw a pen outline around the whole row via :has(:focus-visible)."
+    },
+    "selection": {
+      "background": "var(--highlight)",
+      "color": "var(--ink)"
+    },
+    "colorScheme": "light-only"
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink square button for the main action; turns pen blue on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">See the work<svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 24px;background:var(--ink,#15171c);color:var(--paper,#fff);font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.9375rem;font-weight:500;text-decoration:none;border-radius:0;transition:background-color 200ms}.ds-btn-primary svg{transition:transform 300ms cubic-bezier(.16,1,.3,1)}.ds-btn-primary:hover{background:var(--pen,#1d3bc4)}.ds-btn-primary:hover svg{transform:translateX(4px)}.ds-btn-primary:focus-visible{outline:2px solid var(--pen,#1d3bc4);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Text link with a strong-hairline underline; pen blue on hover.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">About me<svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:0 4px;color:var(--ink,#15171c);font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.9375rem;font-weight:500;text-decoration:underline;text-decoration-color:var(--line-strong,#858b96);text-decoration-thickness:1px;text-underline-offset:.4em;transition:color 200ms,text-decoration-color 200ms}.ds-btn-secondary svg{transition:transform 300ms cubic-bezier(.16,1,.3,1)}.ds-btn-secondary:hover{color:var(--pen,#1d3bc4);text-decoration-color:var(--pen,#1d3bc4)}.ds-btn-secondary:hover svg{transform:translateX(4px)}.ds-btn-secondary:focus-visible{outline:2px solid var(--pen,#1d3bc4);outline-offset:3px}"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky hairline header; current page gets a 2px pen bar.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#\">Name Surname <span>UX/UI &amp; Product Designer</span></a><ul><li><a href=\"#\" aria-current=\"page\">Work</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Contact</a></li></ul></header>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;height:4.25rem;padding:0 24px;background:var(--paper,#fff);border-bottom:1px solid var(--line,#e2e4e8);font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif}.ds-nav-name{color:var(--ink,#15171c);font-size:1.0625rem;font-weight:600;letter-spacing:-.01em;text-decoration:none}.ds-nav-name span{margin-left:12px;font-size:.9375rem;font-weight:400;color:var(--subtle,#5c626d)}.ds-nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}.ds-nav ul a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:.9375rem;color:var(--muted,#474c56);text-decoration:none;transition:color 150ms}.ds-nav ul a:hover,.ds-nav ul a[aria-current]{color:var(--ink,#15171c)}.ds-nav ul a::after{content:'';position:absolute;left:10px;right:10px;bottom:8px;height:2px;background:var(--pen,#1d3bc4);transform:scaleX(0);transform-origin:left;transition:transform 300ms cubic-bezier(.16,1,.3,1)}.ds-nav ul a[aria-current]::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--pen,#1d3bc4);outline-offset:3px}"
+    },
+    {
+      "name": "Discipline Filter",
+      "kind": "chip",
+      "refersTo": "nav-link",
+      "description": "Single-select text filter with counts; pressed item gets the pen bar.",
+      "html": "<div class=\"ds-filter\" role=\"group\" aria-label=\"Filter\"><button aria-pressed=\"true\">All <span>6</span></button><button aria-pressed=\"false\">CRO <span>3</span></button><button aria-pressed=\"false\">Research <span>2</span></button><button disabled>QA <span>0</span></button></div>",
+      "css": ".ds-filter{display:flex;flex-wrap:wrap;gap:4px;font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif}.ds-filter button{position:relative;display:inline-flex;align-items:baseline;gap:6px;min-height:44px;padding:10px 10px 0;border:0;background:none;font:inherit;font-size:.9375rem;color:var(--muted,#474c56);cursor:pointer;transition:color 150ms}.ds-filter button span{font-size:.75rem;color:var(--subtle,#5c626d);font-variant-numeric:tabular-nums}.ds-filter button:hover,.ds-filter button[aria-pressed=true]{color:var(--ink,#15171c)}.ds-filter button::after{content:'';position:absolute;left:10px;right:10px;bottom:6px;height:2px;background:var(--pen,#1d3bc4);transform:scaleX(0);transform-origin:left;transition:transform 300ms cubic-bezier(.16,1,.3,1)}.ds-filter button[aria-pressed=true]::after{transform:scaleX(1)}.ds-filter button:disabled{color:var(--line-strong,#858b96);cursor:not-allowed}.ds-filter button:focus-visible{outline:2px solid var(--pen,#1d3bc4);outline-offset:3px}"
+    },
+    {
+      "name": "Evidence Badges",
+      "kind": "custom",
+      "refersTo": "evidence-badge",
+      "description": "Evidence state by stroke plus word: solid, dashed, dotted, open ring.",
+      "html": "<div class=\"ds-evidence\"><span class=\"ds-ev ds-ev-verified\">Verified</span><span class=\"ds-ev ds-ev-directional\">Directional</span><span class=\"ds-ev ds-ev-unverified\">Unverified</span><span class=\"ds-ev ds-ev-demo\"><svg aria-hidden=\"true\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"6\" cy=\"6\" r=\"4.75\"/></svg>Demo data</span></div>",
+      "css": ".ds-evidence{display:flex;flex-wrap:wrap;gap:20px}.ds-ev{font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.8125rem;line-height:1.35;font-weight:500;white-space:nowrap;text-decoration-line:underline;text-decoration-thickness:2px;text-underline-offset:.3em}.ds-ev-verified{color:var(--ink,#15171c);text-decoration-color:var(--pen,#1d3bc4);text-decoration-style:solid}.ds-ev-directional{color:var(--ink,#15171c);text-decoration-color:var(--pen,#1d3bc4);text-decoration-style:dashed}.ds-ev-unverified{color:var(--muted,#474c56);text-decoration-color:var(--line-strong,#858b96);text-decoration-style:dotted}.ds-ev-demo{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--strike,#c42d19)}"
+    },
+    {
+      "name": "Pen Marks",
+      "kind": "custom",
+      "refersTo": "margin-note",
+      "description": "Inline marks drawn left to right on hover here (on scroll in the site): underline, dashed, strike, highlight.",
+      "html": "<p class=\"ds-marks\">Then checkout <span class=\"ds-mark ds-mark-u\">completion rises</span>, assumption <span class=\"ds-mark ds-mark-s\">users read the banner</span>, <span class=\"ds-mark ds-mark-d\">inconclusive lift</span>, result <span class=\"ds-mark ds-mark-h\">+4.2%</span>.</p>",
+      "css": ".ds-marks{font-family:Literata,Georgia,serif;font-size:1.25rem;line-height:1.6;color:var(--ink,#15171c)}.ds-mark{--h:2px;background-repeat:no-repeat;background-size:0% var(--h);box-decoration-break:slice;-webkit-box-decoration-break:slice;transition:background-size 900ms cubic-bezier(.16,1,.3,1)}.ds-marks:hover .ds-mark{background-size:100% var(--h)}.ds-mark-u{background-image:linear-gradient(var(--pen,#1d3bc4),var(--pen,#1d3bc4));background-position:0 calc(100% - .02em);padding-bottom:.06em}.ds-mark-d{background-image:repeating-linear-gradient(90deg,var(--pen,#1d3bc4) 0 9px,transparent 9px 14px);background-position:0 calc(100% - .02em);padding-bottom:.06em}.ds-mark-s{background-image:linear-gradient(var(--strike,#c42d19),var(--strike,#c42d19));background-position:0 56%}.ds-mark-h{--h:.42em;background-image:linear-gradient(var(--highlight,#ffe55c),var(--highlight,#ffe55c));background-position:0 88%;transition-duration:700ms}@media (prefers-reduced-motion:reduce){.ds-mark{transition:none;background-size:100% var(--h)}}"
+    },
+    {
+      "name": "Image Slot",
+      "kind": "card",
+      "refersTo": "image-slot",
+      "description": "Placeholder with research grid, crop marks and a written note.",
+      "html": "<div class=\"ds-slot\" role=\"img\" aria-label=\"Image placeholder: Your portrait\"><i class=\"tl\"></i><i class=\"tr\"></i><i class=\"bl\"></i><i class=\"br\"></i><p>Your portrait<span>4:5 photo</span></p></div><p class=\"ds-note\">Graphic design since 2011, then QA, then UX/UI &amp; CRO.</p>",
+      "css": ".ds-slot{position:relative;width:220px;aspect-ratio:4/5;background-color:var(--placeholder,#f7f8fa);background-image:linear-gradient(var(--grid,#e6ebf3) 1px,transparent 1px),linear-gradient(90deg,var(--grid,#e6ebf3) 1px,transparent 1px);background-size:8px 8px;background-position:-1px -1px}.ds-slot i{position:absolute;width:14px;height:14px;border:0 solid var(--ink,#15171c)}.ds-slot .tl{top:-1px;left:-1px;border-top-width:1px;border-left-width:1px}.ds-slot .tr{top:-1px;right:-1px;border-top-width:1px;border-right-width:1px}.ds-slot .bl{bottom:-1px;left:-1px;border-bottom-width:1px;border-left-width:1px}.ds-slot .br{bottom:-1px;right:-1px;border-bottom-width:1px;border-right-width:1px}.ds-slot p{position:absolute;left:20px;right:20px;bottom:20px;margin:0;font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.8125rem;font-weight:500;color:var(--ink,#15171c)}.ds-slot p span{display:block;font-weight:400;color:var(--subtle,#5c626d)}.ds-note{max-width:30ch;margin-top:16px;font-family:Literata,Georgia,serif;font-style:italic;font-size:.9375rem;line-height:1.45;color:var(--pen,#1d3bc4)}"
+    },
+    {
+      "name": "Hypothesis Panel",
+      "kind": "card",
+      "refersTo": "hypothesis-panel",
+      "description": "If / Then / Because on the research grid; the Then clause carries the verdict mark.",
+      "html": "<div class=\"ds-hyp\"><div class=\"ds-hyp-head\"><span>Written before the test</span><span class=\"ds-hyp-verdict\">Not supported by the test</span></div><dl><div><dt>If</dt><dd>we show the delivery date on the product page</dd></div><div><dt>Then</dt><dd><s>add-to-cart rate rises</s></dd></div><div><dt>Because</dt><dd>uncertainty about timing blocks the decision</dd></div></dl></div>",
+      "css": ".ds-hyp{border:1px solid var(--ink,#15171c);background-color:var(--placeholder,#f7f8fa);background-image:linear-gradient(var(--grid,#e6ebf3) 1px,transparent 1px),linear-gradient(90deg,var(--grid,#e6ebf3) 1px,transparent 1px);background-size:8px 8px}.ds-hyp-head{display:flex;justify-content:space-between;gap:24px;padding:12px 32px;background:var(--paper,#fff);border-bottom:1px solid var(--ink,#15171c);font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.8125rem;font-weight:500}.ds-hyp-verdict{color:var(--strike,#c42d19);text-decoration:underline 2px var(--strike,#c42d19);text-underline-offset:.3em}.ds-hyp dl{margin:0;padding:40px 32px;display:grid;gap:24px}.ds-hyp dl div{display:grid;grid-template-columns:6.5rem 1fr;gap:24px}.ds-hyp dt{padding-top:8px;font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;font-size:.8125rem;font-weight:500;color:var(--pen,#1d3bc4)}.ds-hyp dd{margin:0;font-family:Literata,Georgia,serif;font-size:1.375rem;line-height:1.45;color:var(--ink,#15171c)}.ds-hyp s{text-decoration:none;background:linear-gradient(var(--strike,#c42d19),var(--strike,#c42d19)) no-repeat 0 56%/100% 2px}"
+    },
+    {
+      "name": "Metric Card",
+      "kind": "card",
+      "refersTo": "metric-card",
+      "description": "Ink top rule, large tabular value (highlighted only if verified), label, badge, source note.",
+      "html": "<div class=\"ds-metric\"><div class=\"ds-metric-v\"><span>+4.2%</span></div><div class=\"ds-metric-l\">Add-to-cart rate</div><span class=\"ds-ev-v\">Verified</span><p class=\"ds-metric-src\">Source: A/B test readout, 4 weeks</p></div>",
+      "css": ".ds-metric{max-width:280px;border-top:1px solid var(--ink,#15171c);padding-top:20px;font-family:'Schibsted Grotesk',ui-sans-serif,system-ui,sans-serif;color:var(--ink,#15171c)}.ds-metric-v{font-size:clamp(2.5rem,1.9rem + 2.6vw,4rem);line-height:1;font-weight:600;letter-spacing:-.04em;font-variant-numeric:tabular-nums lining-nums}.ds-metric-v span{background:linear-gradient(var(--highlight,#ffe55c),var(--highlight,#ffe55c)) no-repeat 0 88%/100% .42em}.ds-metric-l{margin-top:12px;font-weight:600}.ds-ev-v{display:inline-block;margin-top:16px;font-size:.8125rem;font-weight:500;text-decoration:underline 2px var(--pen,#1d3bc4);text-underline-offset:.3em}.ds-metric-src{margin:8px 0 0;font-family:Literata,Georgia,serif;font-style:italic;font-size:.9375rem;color:var(--pen,#1d3bc4)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Notebook",
+    "overview": "A designer's working notebook made editorial. The page is plain white paper with near-black ink; the person leads, and each case study reads as the record of an investigation (evidence, hypothesis, decision, outcome) with the pen marks left in. Two pens and one highlighter are the only colour on the page, and each has one job: blue annotates, red corrects, yellow certifies a verified result.\n\nDensity is calm and editorial: generous section spacing, a 12-column grid with headings hanging in a narrow left column, hairline rules that divide the work into rows like a ledger. Ornament is replaced by marks that mean something. A pen stroke drawn under, through or behind text always restates something already said in words beside it, so the marks reward the eye without carrying meaning alone.\n\nThe world is light-only by owner decision: a white background was pinned as a brand commitment and dark mode was removed on purpose (`color-scheme: light`, theme colour #ffffff). It deliberately replaced an earlier warm-cream, italic-serif, tracked-mono look.",
+    "keyCharacteristics": [
+      "White paper, near-black ink, graphite secondary text; light only.",
+      "Two pens and one highlighter, each with a single job.",
+      "Evidence carried by stroke style plus words, never by colour alone.",
+      "Schibsted Grotesk for display and interface; Literata for reading and blue italic margin notes.",
+      "Square corners, hairline rules, no shadows, no pills.",
+      "Motion is a pen drawing a mark, plus one shared-element cover morph."
+    ],
+    "rules": [
+      {
+        "name": "The One Job Per Pen Rule",
+        "body": "Blue annotates and points (sources, links, focus); red only marks something disproved, rejected or demo; yellow only sits behind a verified result value or a text selection. If a colour is not doing its job, it is not on the page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Words First Rule",
+        "body": "Every mark and colour restates a word already present (Verified, Losing test, Rejected, Demo data). Remove the colour and the meaning survives (WCAG 1.4.1).",
+        "section": "colors"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels are small sans in sentence case. No tracked uppercase, no monospace costume, no italic display serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Margin Note Rule",
+        "body": "Blue italic Literata is the voice of the annotator: sources, provenance and asides only, never body copy or headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ledger Rule",
+        "body": "Groups open with a 1px ink rule; items inside are divided by 1px hairlines. Content is organised as rows, not tiles.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled Not Raised Rule",
+        "body": "Nothing floats. Emphasis is a heavier stroke, never a shadow, blur or lift.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the page white (#ffffff) and light-only; colour is limited to the two pens and the highlighter.",
+      "Do state every evidence state and outcome in words, and let the stroke repeat it: solid verified, dashed directional, dotted unverified, open ring demo, red strike disproved.",
+      "Do reserve highlighter yellow for verified result values (and text selection), and correction red for disproved, rejected or demo.",
+      "Do use the blue pen for sources, annotations, links on hover and the single 2px focus ring.",
+      "Do draw marks once, on scroll into view, with the expo-out curve, and draw them instantly under reduced motion.",
+      "Do organise content as ruled rows: an ink rule to open, hairlines between.",
+      "Do keep image slots honest: research grid, crop marks and a written note of what belongs there."
+    ],
+    "donts": [
+      "Don't add eyebrow or kicker labels above headings, numbered section eyebrows, or tracked uppercase labels.",
+      "Don't round corners, use pills, or add shadows, blurs or lifts.",
+      "Don't use red or yellow decoratively, or blue for anything that is not an annotation, link, active state or focus.",
+      "Don't add a dark mode or tint the paper (no cream, no warm off-white).",
+      "Don't let anything float, bounce or fade in by default; motion is a pen drawing or the cover morph.",
+      "Don't add taped paper, sticky notes or decorative scribbles; every mark means something.",
+      "Don't lay the work out as a hero followed by an equal card grid."
+    ]
+  }
+}

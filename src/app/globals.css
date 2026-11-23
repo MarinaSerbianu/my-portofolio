@@ -1,26 +1,261 @@
 @import "tailwindcss";
 
+/* ───────────────────────── Design tokens ─────────────────────────
+   The Working Notebook: white paper, ink, two pens and one highlighter.
+   pen (blue)   annotations, sources, links, focus
+   strike (red) only for disproved or rejected things
+   highlight    only behind verified result values                     */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #ffffff;
+  --surface: #f5f6f8;
+  --ink: #15171c;
+  --muted: #474c56;
+  --subtle: #5c626d;
+  --pen: #1d3bc4;
+  --strike: #c42d19;
+  --highlight: #ffe55c;
+  --line: #e2e4e8;
+  --line-strong: #858b96;
+  --grid: #e6ebf3;
+  --placeholder: #f7f8fa;
+
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section: clamp(5rem, 11vw, 10rem);
+  --header-h: 4.25rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-pen: var(--pen);
+  --color-strike: var(--strike);
+  --color-highlight: var(--highlight);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-grid: var(--grid);
+  --color-placeholder: var(--placeholder);
+
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-literata), Georgia, serif;
+
+  /* Fluid type scale: 320px → 1920px */
+  --text-display: clamp(3rem, 2rem + 4.6vw, 6rem);
+  --text-display--line-height: 0.94;
+  --text-display--letter-spacing: -0.04em;
+  --text-h1: clamp(2.25rem, 1.7rem + 2.6vw, 4.25rem);
+  --text-h1--line-height: 1.02;
+  --text-h1--letter-spacing: -0.035em;
+  --text-h2: clamp(1.75rem, 1.45rem + 1.4vw, 2.75rem);
+  --text-h2--line-height: 1.08;
+  --text-h2--letter-spacing: -0.028em;
+  --text-h3: clamp(1.2rem, 1.12rem + 0.4vw, 1.5rem);
+  --text-h3--line-height: 1.25;
+  --text-h3--letter-spacing: -0.015em;
+  --text-lead: clamp(1.2rem, 1.08rem + 0.55vw, 1.625rem);
+  --text-lead--line-height: 1.45;
+  --text-body: clamp(1.0625rem, 1.03rem + 0.12vw, 1.125rem);
+  --text-body--line-height: 1.65;
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.5;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.35;
+
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section);
+  --spacing-header: var(--header-h);
+  --container-page: 90rem;
+  --container-prose: 66ch;
+
+  --ease-out-expo: var(--ease-out);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ───────────────────────── Base ───────────────────────── */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: calc(var(--header-h) + 1.5rem);
+    scrollbar-color: var(--line-strong) var(--paper);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-serif);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    font-variant-numeric: proportional-nums;
+    caret-color: var(--pen);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--highlight);
+    color: var(--ink);
+  }
+
+  /* One focus ring everywhere: the blue pen (WCAG 2.4.7 / 2.4.13) */
+  :focus-visible {
+    outline: 2px solid var(--pen);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ───────────────────────── Utilities ───────────────────────── */
+
+/* Small sans label: metadata, table heads. Sentence case, never tracked caps. */
+@utility label {
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+/* Blue-pen margin note */
+@utility note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-small);
+  line-height: 1.45;
+  color: var(--pen);
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: var(--line-strong);
+  transition:
+    text-decoration-color 150ms,
+    color 150ms;
+  &:hover {
+    color: var(--pen);
+    text-decoration-color: currentColor;
+  }
+}
+
+/* Faint research grid: only inside image slots and the hypothesis panel */
+@utility research-grid {
+  background-color: var(--placeholder);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 8px 8px;
+  background-position: -1px -1px;
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ───────────────────────── View transitions ─────────────────────────
+   Route changes: short cross-fade. Index cover → case cover: shared morph. */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 220ms;
+  animation-timing-function: var(--ease-out);
+}
+
+::view-transition-group(.morph) {
+  animation-duration: 480ms;
+  animation-timing-function: var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ───────────────────────── Pen marks ─────────────────────────
+   Drawn on inline text (wraps across lines in reading order).
+   <Mark> sets data-drawn when the text scrolls into view.        */
+
+@layer components {
+  .mark {
+    --mark-h: 2px;
+    background-repeat: no-repeat;
+    background-size: 0% var(--mark-h);
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
+    transition: background-size 900ms var(--ease-out);
+  }
+  .mark[data-drawn] {
+    background-size: 100% var(--mark-h);
+  }
+  .mark-underline {
+    background-image: linear-gradient(var(--pen), var(--pen));
+    background-position: 0 calc(100% - 0.02em);
+    padding-bottom: 0.06em;
+  }
+  .mark-dashed {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--pen) 0 9px,
+      transparent 9px 14px
+    );
+    background-position: 0 calc(100% - 0.02em);
+    padding-bottom: 0.06em;
+  }
+  .mark-strike {
+    background-image: linear-gradient(var(--strike), var(--strike));
+    background-position: 0 56%;
+  }
+  .mark-highlight {
+    --mark-h: 0.42em;
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-position: 0 88%;
+    transition-duration: 700ms;
+  }
 }

@@ -1,0 +1,221 @@
+{
+  "slug": "demo-delivery-promise",
+  "title": "Making the delivery promise visible on the product page",
+  "summary": "DEMO CONTENT — a representative case study used to build and test the template. All numbers are placeholders, not real results.",
+  "client": "Demo: European online retailer",
+  "year": 2026,
+  "order": 1,
+  "featured": true,
+  "isDemo": true,
+  "categories": ["cro", "ux-ui", "ecommerce", "research"],
+  "role": "Lead UX/UI & CRO Designer — research, hypothesis, design, test QA, readout",
+  "timeframe": "Demo · 6 weeks",
+  "team": ["Product manager", "Front-end developer", "Data analyst", "Copywriter"],
+  "cover": {
+    "src": "/demo/cover.svg",
+    "alt": "Demo wireframe of a product page with a delivery-date line highlighted below the price",
+    "width": 1600,
+    "height": 1000
+  },
+
+  "context": {
+    "body": [
+      "This is demo content. It shows how a real project would be structured: a personalised product with a multi-step configurator, sold mostly on mobile, with strong seasonal peaks.",
+      "As the designer on the conversion team I owned the problem from discovery to readout, working with a PM, one developer and an analyst."
+    ]
+  },
+  "challenge": {
+    "question": "Why do mobile visitors who reach the product page add to cart, then leave at shipping?",
+    "body": [
+      "Demo narrative: drop-off between cart and checkout rose during peak season. Delivery information lived in a collapsed accordion below the fold, and only appeared as a date at checkout.",
+      "The business needed to know whether delivery uncertainty — not price — was the main blocker before investing in faster fulfilment."
+    ]
+  },
+  "research": {
+    "methods": ["Funnel analysis", "Session recordings", "Customer service ticket review", "5-second test"],
+    "findings": [
+      {
+        "title": "Visitors look for delivery information and can't find it",
+        "detail": "Demo finding: in a sample of recordings, mobile users scrolled to the footer and back before abandoning.",
+        "evidenceType": "qualitative",
+        "source": { "label": "Demo — session recording review", "ref": "INTERNAL-CANARY recordings-folder-link" }
+      },
+      {
+        "title": "\"When will it arrive?\" is the most common pre-purchase question",
+        "detail": "Demo finding: delivery timing dominates pre-purchase support contacts during peak season.",
+        "evidenceType": "quantitative",
+        "source": { "label": "Demo — support ticket tagging" }
+      },
+      {
+        "title": "Delivery copy uses internal language",
+        "detail": "\"Production time + shipping time\" forces customers to do date maths.",
+        "evidenceType": "heuristic",
+        "source": { "label": "Heuristic evaluation" }
+      }
+    ]
+  },
+  "hypothesis": {
+    "if": "we show a concrete estimated delivery date directly below the price on mobile product pages",
+    "then": "more visitors who add to cart will proceed through checkout",
+    "because": "recordings and support tickets indicate delivery uncertainty, not price, is the main reason for hesitation in peak season",
+    "rationale": [
+      "Isolated to one change (date placement + format) so the result can be attributed.",
+      "Mobile only: that is where the accordion is furthest below the fold.",
+      "Guardrail on return rate to make sure we don't over-promise."
+    ]
+  },
+  "exploration": {
+    "body": [
+      "Three directions were explored before choosing the one that isolates the idea best."
+    ],
+    "options": [
+      {
+        "name": "A — Countdown timer",
+        "description": "\"Order within 3h 12m for delivery Friday.\"",
+        "decision": "rejected",
+        "reason": "Adds urgency as a second variable; hard to attribute the effect."
+      },
+      {
+        "name": "B — Date below price",
+        "description": "A single line: \"Estimated delivery: Fri, 12 Dec\".",
+        "decision": "chosen",
+        "reason": "Smallest change that answers the user's question at the decision point."
+      },
+      {
+        "name": "C — Delivery calculator",
+        "description": "Postcode entry with carrier options.",
+        "decision": "parked",
+        "reason": "Higher effort; revisit if B shows a signal."
+      }
+    ],
+    "images": []
+  },
+  "beforeAfter": {
+    "before": {
+      "src": "/demo/before.svg",
+      "alt": "Demo wireframe, before: delivery information hidden inside a collapsed accordion below the add-to-cart button",
+      "width": 800,
+      "height": 1000
+    },
+    "after": {
+      "src": "/demo/after.svg",
+      "alt": "Demo wireframe, after: estimated delivery date shown as one line directly below the price",
+      "width": 800,
+      "height": 1000
+    },
+    "caption": "Demo wireframes. Drag or use the arrow keys to compare."
+  },
+  "experiment": {
+    "type": "A/B test (50/50)",
+    "platform": "Demo — client-side testing tool",
+    "duration": "Demo · 3 weeks, two full business cycles",
+    "audience": "Mobile visitors on product pages, all traffic sources",
+    "split": "50 / 50",
+    "primaryMetric": "Checkout start rate (from cart)",
+    "secondaryMetrics": ["Add-to-cart rate", "Order conversion rate"],
+    "guardrails": ["Return rate", "\"Where is my order\" contacts"],
+    "details": [
+      "Sample size calculated up front for a minimum detectable effect; runtime fixed in advance, no peeking-based stopping.",
+      "Variant QA'd on a device matrix before launch, including long date strings in other locales.",
+      "Delivery date computed server-side from the same source as checkout so both always match."
+    ]
+  },
+  "results": {
+    "summary": "Demo outcome: the primary metric moved in the expected direction, but the order-level effect was inconclusive.",
+    "outcome": "inconclusive",
+    "metrics": [
+      {
+        "id": "checkout-start",
+        "label": "Checkout start rate",
+        "value": 0,
+        "unit": "%",
+        "precision": 1,
+        "signed": true,
+        "direction": "positive",
+        "evidenceStatus": "demo",
+        "source": { "label": "Demo placeholder — no real data", "ref": "INTERNAL-CANARY dashboard-url" },
+        "publicVisibility": true,
+        "note": "Placeholder. Replace with the verified value from the research workflow."
+      },
+      {
+        "id": "order-cr",
+        "label": "Order conversion rate",
+        "value": 0,
+        "unit": "%",
+        "precision": 1,
+        "signed": true,
+        "direction": "neutral",
+        "evidenceStatus": "demo",
+        "source": { "label": "Demo placeholder — no real data" },
+        "publicVisibility": true,
+        "note": "Placeholder."
+      },
+      {
+        "id": "sessions",
+        "label": "Sessions in test",
+        "value": 0,
+        "unit": "sessions",
+        "evidenceStatus": "demo",
+        "source": { "label": "Demo placeholder — no real data" },
+        "publicVisibility": true
+      },
+      {
+        "id": "revenue-impact",
+        "label": "Revenue impact (confidential)",
+        "value": 999999,
+        "unit": "€",
+        "evidenceStatus": "verified",
+        "source": { "label": "INTERNAL-CANARY finance report" },
+        "publicVisibility": false
+      }
+    ],
+    "decision": "Demo decision: ship the date line to 100% (no harm on guardrails, clear user benefit) and test the parked postcode calculator next."
+  },
+  "failedAssumptions": [
+    {
+      "assumption": "Showing the date would lift add-to-cart.",
+      "reality": "Demo: add-to-cart didn't move. The date mattered after the decision to buy, not before it.",
+      "evidence": "Demo — secondary metric flat"
+    },
+    {
+      "assumption": "Customers wanted the fastest option.",
+      "reality": "Demo: in follow-up interviews, they wanted a reliable date before a specific occasion, not the fastest one.",
+      "evidence": "Demo — follow-up interviews"
+    }
+  ],
+  "iterations": [
+    {
+      "label": "v1",
+      "change": "Date line below price",
+      "outcome": "Demo: primary metric up, orders inconclusive."
+    },
+    {
+      "label": "v2",
+      "change": "Occasion framing: \"Arrives before Christmas\" in peak season",
+      "outcome": "Demo: queued as next test."
+    }
+  ],
+  "lessons": [
+    "Put the answer where the question is asked — at the price, not in the footer.",
+    "A metric moving mid-funnel doesn't guarantee an order-level effect; plan for both.",
+    "Ask why a date matters. \"Before the occasion\" is a different promise from \"fast\"."
+  ],
+  "collaboration": {
+    "ownership": [
+      "Problem framing and research synthesis",
+      "Hypothesis and test design",
+      "UI design and copy with the copywriter",
+      "Variant QA across devices",
+      "Readout and recommendation"
+    ],
+    "partners": [
+      { "role": "Product manager", "contribution": "Prioritisation and stakeholder alignment" },
+      { "role": "Front-end developer", "contribution": "Variant build and server-side date logic" },
+      { "role": "Data analyst", "contribution": "Sample size, tracking validation, statistical review" }
+    ]
+  },
+  "internalNotes": {
+    "warning": "INTERNAL-CANARY — this string must never appear in the public build.",
+    "stakeholderComments": "Confidential."
+  }
+}
